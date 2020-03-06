@@ -3,4 +3,7 @@ project(coding)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(coding main.cpp)
+add_executable(coding
+        #Flatten.cpp
+        #View.cpp
+        BinaryCode.cpp)
