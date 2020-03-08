@@ -6,4 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(coding
         #Flatten.cpp
         #View.cpp
-        BinaryCode.cpp)
+        #BinaryCode.cpp
+        #GCD_LCM.cpp
+        #queue.cpp
+        hash.cpp)
