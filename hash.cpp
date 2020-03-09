@@ -29,6 +29,7 @@
 //완주하지 못한선수
 
 //sort 사용
+/*
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -85,3 +86,5 @@ string solution(vector<string> participant, vector<string> completion) {
     }
     return answer;
 }
+ */
+

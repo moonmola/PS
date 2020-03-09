@@ -9,4 +9,6 @@ add_executable(coding
         #BinaryCode.cpp
         #GCD_LCM.cpp
         #queue.cpp
-        hash.cpp)
+        #hash.cpp
+        #hash_STL.cpp
+        exam.cpp)
