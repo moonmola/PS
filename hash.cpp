@@ -65,7 +65,7 @@ string solution(vector<string> participant, vector<string> completion) {
             strMap.insert(make_pair(elem, 1));
         else
             strMap[elem]++;
-    }
+     }
 
     for(auto elem : participant)
     {
