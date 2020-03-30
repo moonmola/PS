@@ -27,4 +27,27 @@ add_executable(coding
         #programmers_level1/Casesar'sPassword.cpp
         #programmers_level1/StrangeCharacter.cpp
         #programmers_level1/DescendingNumber.cpp
-        programmers_level1/SecretMap.cpp programmers_level1/FailureRate.cpp programmers_level1/DartGame.cpp programmers_level2/FunctionDevelop.cpp programmers_level2/SkillTree.cpp programmers_level2/Country124.cpp programmers_level2/tower.cpp programmers_level2/StockPrice.cpp)
+        #programmers_level1/SecretMap.cpp
+        #programmers_level1/FailureRate.cpp
+        #programmers_level1/DartGame.cpp
+        #programmers_level2/FunctionDevelop.cpp
+        #programmers_level2/SkillTree.cpp
+        #programmers_level2/Country124.cpp
+        #programmers_level2/tower.cpp
+        #programmers_level2/StockPrice.cpp
+        #programmers_level2/Truck.cpp
+        #programmers_level2/IronBar.cpp
+        #programmers_level2/NormalSquare.cpp
+        #programmers_level2/Printer.cpp
+        #programmers_level2/StringCompression.cpp
+        #programmers_level2/ColoringBook.cpp
+        #BruteForse.cpp
+        #programmers_level2/Joystick.cpp
+        #GreedyExample.cpp
+        #programmers_level2/Spicier.cpp
+        maestroTEST/1.cpp
+        #maestroTEST/2.cpp
+        #maestroTEST/3.cpp
+        #maestroTEST/4.cpp
+        #maestroTEST/5.cpp
+        )
