@@ -45,9 +45,13 @@ add_executable(coding
         #programmers_level2/Joystick.cpp
         #GreedyExample.cpp
         #programmers_level2/Spicier.cpp
-        maestroTEST/1.cpp
+#        maestroTEST/1.cpp
         #maestroTEST/2.cpp
         #maestroTEST/3.cpp
         #maestroTEST/4.cpp
         #maestroTEST/5.cpp
-        )
+#        test.cpp
+#        baekjoon/10992.cpp
+#        baekjoon/10991.cpp
+#        baekjoon/2522.cpp
+        baekjoon/10818.cpp)
