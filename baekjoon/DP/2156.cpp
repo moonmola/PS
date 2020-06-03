@@ -18,6 +18,7 @@
  * max(dp[n],dp[n-1)) ->2번 연속 안먹을 경우가 존재
  * 위에 두개까진 생각했음
  */
+/*
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -43,6 +44,7 @@ int main(){
     cout << ans;
     return 0;
 }
+ */
 /* 이게 맞았음 하지만 1 2 3 4 의 경우 틀림
 #include <iostream>
 #include <algorithm>
@@ -64,4 +66,4 @@ int main(){
     cout << ans;
     return 0;
 }
- */
+*/
