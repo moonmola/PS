@@ -68,4 +68,15 @@ add_executable(coding
 #        baekjoon/DP/11055.cpp
 #        baekjoon/DP/11722.cpp
 #        baekjoon/DP/11054.cpp
-        baekjoon/DP/1912.cpp baekjoon/DP/2579.cpp)
+#        baekjoon/DP/1912.cpp
+#        baekjoon/DP/2579.cpp
+#        baekjoon/DP/1699.cpp
+#        baekjoon/DP/2133.cpp
+#        baekjoon/DP/9461.cpp
+#        baekjoon/DP/2225.cpp
+#        baekjoon/DP/2011.cpp
+#        baekjoon/DP/11052.cpp
+#        baekjoon/else/2751.cpp
+#        baekjoon/else/11650.cpp
+#        baekjoon/else/11651.cpp
+        baekjoon/else/10814.cpp)
