@@ -7,11 +7,11 @@
 //
 
 /*
- *  ¼ö Á¤·ÄÇÏ±â 2
- *  ½Ã°£ÃÊ°ú
- *  ½Ã°£ º¹Àâµµ°¡ nlognÀÎ ¾Ë°í¸®Áò »ç¿ëÇØ¾ßÇÔ
+ *  ìˆ˜ ì •ë ¬í•˜ê¸° 2
+ *  ì‹œê°„ì´ˆê³¼
+ *  ì‹œê°„ ë³µìž¡ë„ê°€ nlognì¸ ì•Œê³ ë¦¬ì¦˜ ì‚¬ìš©í•´ì•¼í•¨
  *
- *  printf, scanf ¾²¸é ½Ã°£ÀÌ ÁÙ¾îµé¾î¼­ ±×³É »ç¿ëÇØµµµÊ
+ *  printf, scanf ì“°ë©´ ì‹œê°„ì´ ì¤„ì–´ë“¤ì–´ì„œ ê·¸ëƒ¥ ì‚¬ìš©í•´ë„ë¨
  */
 #include <iostream>
 #include <algorithm>

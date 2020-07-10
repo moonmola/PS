@@ -79,4 +79,5 @@ add_executable(coding
 #        baekjoon/else/2751.cpp
 #        baekjoon/else/11650.cpp
 #        baekjoon/else/11651.cpp
-        baekjoon/else/10814.cpp)
+#        baekjoon/else/10814.cpp
+        baekjoon/else/10825.cpp)

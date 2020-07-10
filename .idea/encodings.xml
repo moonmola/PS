@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
-    <file url="file://$PROJECT_DIR$/GreedyExample.cpp" charset="x-windows-949" />
-    <file url="PROJECT" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/GreedyExample.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/baekjoon/else/10814.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/baekjoon/else/11650.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/baekjoon/else/2751.cpp" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

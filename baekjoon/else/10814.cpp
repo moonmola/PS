@@ -6,9 +6,9 @@
 // Copyright (c) 2020 mooninzoo. All rights reserved
 //
 /*
- * ³ªÀÌ¼ø Á¤·Ä
- * stable_sort¸¦ ÀÌ¿ëÇÏ¸é marge sort¸¦ »ç¿ëÇÏ±â¶§¹®¿¡
- * ÀÔ·ÂÇÑ ¼ø¼­´ë·Î Á¤·ÄµÈ´Ù.
+ * ë‚˜ì´ìˆœ ì •ë ¬
+ * stable_sortë¥¼ ì´ìš©í•˜ë©´ marge sortë¥¼ ì‚¬ìš©í•˜ê¸°ë•Œë¬¸ì—
+ * ì…ë ¥í•œ ìˆœì„œëŒ€ë¡œ ì •ë ¬ëœë‹¤.
  */
 
 #include <iostream>

@@ -7,9 +7,13 @@
 //
 
 /*
- * ��ǥ �����ϱ� 2
- * printf, scanf�� �Ⱦ��� �ð��ʰ��ȴ�
- * first���� ������ second������ �������� �ϴ°� default?
+ * 좌표 정렬하기 2
+ * printf, scanf를 안쓰면 시간초과된다
+ * first값이 같으면 second값으로 오름차순 하는게 default?
+ *//*
+ * 좌표 정렬하기 2
+ * printf, scanf를 안쓰면 시간초과된다
+ * first값이 같으면 second값으로 오름차순 하는게 default?
  */
 
 #include <iostream>

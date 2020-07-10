@@ -7,8 +7,8 @@
 //
 
 /*
- * ÁÂÇ¥ Á¤·ÄÇÏ±â
- * ¿¬»êÀÚ ¿À¹ö·ÎµùÀ» ÅëÇÑ sort¾Ë°í¸®Áò »ç¿ë
+ * ì¢Œí‘œ ì •ë ¬í•˜ê¸°
+ * ì—°ì‚°ì ì˜¤ë²„ë¡œë”©ì„ í†µí•œ sortì•Œê³ ë¦¬ì¦˜ ì‚¬ìš©
  */
 #include <iostream>
 #include <vector>
@@ -36,7 +36,6 @@ int main(){
 #include <vector>
 #include <algorithm>
 using namespace std;
-
 class Point{
     int x;
     int y;
