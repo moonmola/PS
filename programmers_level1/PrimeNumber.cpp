@@ -1,10 +1,10 @@
 //
-// Created by ¹®ÀÎÁÖ on 2020-03-10.
+// Created by ë¬¸ì¸ì£¼ on 2020-03-10.
 //
 
-//programmgers level1 ¼Ò¼öÃ£±â
+//programmgers level1 ì†Œìˆ˜ì°¾ê¸°
 
-//best soultion ´Ù½Ã È®ÀÎÇÏ±â
+//best soultion ë‹¤ì‹œ í™•ì¸í•˜ê¸°
 #include <string>
 #include <vector>
 
@@ -23,7 +23,7 @@ int solution(int n) {
 
     return answer;
 }
-/* mysolution ½Ã°£ÃÊ°ú
+/* mysolution ì‹œê°„ì´ˆê³¼
 #include <string>
 #include <vector>
 #include <iostream>

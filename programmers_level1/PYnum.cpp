@@ -1,8 +1,8 @@
 //
-// Created by ¹®ÀÎÁÖ on 2020-03-10.
+// Created by ë¬¸ì¸ì£¼ on 2020-03-10.
 //
 
-//programmers level1 ¹®ÀÚ¿­ ³» p¿Í yÀÇ °³¼ö
+//programmers level1 ë¬¸ìì—´ ë‚´ pì™€ yì˜ ê°œìˆ˜
 
 #include <string>
 #include <iostream>

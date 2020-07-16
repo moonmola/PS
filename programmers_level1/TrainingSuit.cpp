@@ -1,9 +1,9 @@
 //
-// Created by ¹®ÀÎÁÖ on 2020-03-09.
+// Created by ë¬¸ì¸ì£¼ on 2020-03-09.
 //
 
-//ÇÁ·Î±×·¡¸Ó½º level1 Ã¼À°º¹
-//Å½¿å¹ı(greedy)
+//í”„ë¡œê·¸ë˜ë¨¸ìŠ¤ level1 ì²´ìœ¡ë³µ
+//íƒìš•ë²•(greedy)
 
 /*
 #include <string>
@@ -37,7 +37,7 @@ int solution(int n, vector<int> lost, vector<int> reserve) {
 }
 */
 
-//Àß ¸ğ¸£°Ú´Ù ±×³É bestÄÚµå ¿Ü¿ö¶ó
+//ì˜ ëª¨ë¥´ê² ë‹¤ ê·¸ëƒ¥ bestì½”ë“œ ì™¸ì›Œë¼
 
 #include <string>
 #include <vector>

@@ -1,10 +1,10 @@
 //
-// Created by ¹®ÀÎÁÖ on 2020-03-11.
+// Created by ë¬¸ì¸ì£¼ on 2020-03-11.
 //
 
-//programmers level1 ºñ¹ĞÁöµµ
+//programmers level1 ë¹„ë°€ì§€ë„
 
-//best solution -> ºñÆ®¿¬»êÀÚ »ç¿ë
+//best solution -> ë¹„íŠ¸ì—°ì‚°ì ì‚¬ìš©
 #include <string>
 #include <vector>
 

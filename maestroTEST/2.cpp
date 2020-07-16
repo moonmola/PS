@@ -1,5 +1,5 @@
 //
-// Created by ¹®ÀÎÁÖ on 2020-03-14.
+// Created by ë¬¸ì¸ì£¼ on 2020-03-14.
 //
 
 #include <iostream>
@@ -12,7 +12,7 @@ int main() {
     for(int l = 0; l <=k;l++) {
         int m, n;
         cin >> m >> n;
-        //mÀÌ ¼¼·Î nÀÌ °¡·Î
+        //mï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ nï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         vector<vector<int>> map(m, vector<int>(n));
         vector<vector<int>> temp(m, vector<int>(n, 0));
         for (int i = 0; i < m; i++) {

@@ -1,10 +1,10 @@
 //
-// Created by ¹®ÀÎÁÖ on 2020-03-11.
+// Created by ë¬¸ì¸ì£¼ on 2020-03-11.
 //
 
-//programmers level1 ½ÇÆĞÀ²
+//programmers level1 ì‹¤íŒ¨ìœ¨
 
-// best solution ->pair¿¡´ëÇØ °øºÎ
+// best solution ->pairì—ëŒ€í•´ ê³µë¶€
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -35,7 +35,7 @@ vector<int> solution(int N, vector<int> stages) {
     return answer;
 }
 
-//my solution Ç®´Ù ¸·Èû (°°Àº ½ÇÆĞÀ²¿¡¼­ ÀÎµ¦½º ¿À¸§Â÷¼ø¿¡¼­)
+//my solution Ç®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 /*
 #include <string>
 #include <vector>

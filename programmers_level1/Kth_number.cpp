@@ -1,10 +1,10 @@
 //
-// Created by ¹®ÀÎÁÖ on 2020-03-09.
+// Created by ë¬¸ì¸ì£¼ on 2020-03-09.
 //
 
-//ÇÁ·Î±×·¡¸Ó½º level1 k¹øÂ° ¼ö
+//í”„ë¡œê·¸ë˜ë¨¸ìŠ¤ level1 kë²ˆì§¸ ìˆ˜
 
-/* ³» Ç®ÀÌ
+/* ë‚´ í’€ì´
 #include <string>
 #include <vector>
 #include<algorithm>
@@ -12,18 +12,18 @@
 using namespace std;
 
 vector<int> solution(vector<int> array, vector<vector<int>> commands) {
-    vector<int> answer;
-    for(vector<int> com : commands){
-        vector<int> temp;
+   vector<int> answer;
+   for(vector<int> com : commands){
+       vector<int> temp;
 
-        for(int k = com[0]-1;k<com[1];k++){
-            temp.push_back(array[k]);
-        }
-        sort(temp.begin(),temp.end());
-        answer.push_back(temp[com[2]-1]);
-    }
+       for(int k = com[0]-1;k<com[1];k++){
+           temp.push_back(array[k]);
+       }
+       sort(temp.begin(),temp.end());
+       answer.push_back(temp[com[2]-1]);
+   }
 
-    return answer;
+   return answer;
 }
 */
 //best
