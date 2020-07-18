@@ -9,6 +9,7 @@
  * 나이순 정렬
  * stable_sort를 이용하면 marge sort를 사용하기때문에
  * 입력한 순서대로 정렬된다.
+ * pair쓰는법
  */
 
 #include <iostream>
