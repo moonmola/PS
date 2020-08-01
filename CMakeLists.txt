@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.13)
-project(coding)
+project(PS)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -98,4 +98,4 @@ add_executable(coding
 #        baekjoon/else/11656.cpp
 #        baekjoon/else/1406.cpp
 #        baekjoon/else/1168.cpp
-        baekjoon/else/10430.cpp)
+        baekjoon/else/10430.cpp baekjoon/else/2609.cpp baekjoon/else/1934.cpp baekjoon/else/1850.cpp baekjoon/else/9613.cpp)
