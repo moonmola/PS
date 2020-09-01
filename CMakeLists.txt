@@ -118,4 +118,5 @@ add_executable(coding
 #        baekjoon/else/2004.cpp
 #        baekjoon/graph/1260.cpp
 #        baekjoon/graph/11724.cpp
-        baekjoon/graph/1701.cpp)
+#        baekjoon/graph/1701.cpp
+        baekjoon/graph/10451.cpp baekjoon/graph/2331.cpp)

@@ -8,13 +8,62 @@
 
 /*
  * 이분 그래프
+ * RETRY
  * 모든 변이 색1와 색2 꼭짓점을 포함하도록 색칠할 수 있는 그래프
  */
 #include <iostream>
 #include <queue>
 #include <algorithm>
 #include <cstring>
+#define red 1
+#define blue 2
 using namespace std;
+string answer;
+void dfs(vector<int> graph[], int visit[], int start){
+    for(int i = 0; i < graph[start].size(); i++){
+        int next = graph[start][i];
+        if(visit[start]&&visit[next]&&visit[start]==visit[next]){
+            answer = "NO";
+            break;
+        }
+        if(!visit[next]){
+            visit[next]=red;
+            if(visit[start]==red){
+                visit[next] = blue;
+            }
+            dfs(graph,visit,next);
+        }
+    }
+}
+int main(){
+    int K;
+    cin >> K;
+    while(K>0){
+        int V,E;
+        cin >> V>>E;
+        vector<int> graph[20001];
+        int visit[20001] = {0, };
+        for(int i = 0 ;i < E; i++){
+            int temp1,temp2;
+            cin >> temp1 >> temp2;
+            graph[temp1].push_back(temp2);
+            graph[temp2].push_back(temp1);
+        }
+        answer = "YES";
+        for(int i = 1; i <= V; i++){
+            if(visit[i] == 0){
+                visit[i] = red;
+                dfs(graph,visit,i);
+            }
+        }
+        cout << answer << '\n';
+        K--;
+    }
+    return 0;
+}
+
+
+
 
 
 
