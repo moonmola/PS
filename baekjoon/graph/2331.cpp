@@ -33,7 +33,7 @@ int main(){
     cout.tie(NULL);
     cin.tie(NULL);
     int A;
-    cin >> A >> P;ㅐ
+    cin >> A >> P;
     dfs(A);
     int result=0;
     for(auto elem:a){
