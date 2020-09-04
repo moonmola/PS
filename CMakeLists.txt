@@ -123,4 +123,6 @@ add_executable(coding
 #        baekjoon/graph/2331.cpp
 #        baekjoon/graph/9466.cpp
 #        baekjoon/graph/2667.cpp
-        baekjoon/graph/4963.cpp)
+#        baekjoon/graph/4963.cpp
+#        baekjoon/graph/7576.cpp
+        baekjoon/graph/2178.cpp)
