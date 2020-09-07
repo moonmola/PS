@@ -132,4 +132,8 @@ add_executable(coding
 #        baekjoon/graph/1167.cpp
 #        baekjoon/graph/1967.cpp
 #        baekjoon/search/1654.cpp
-        baekjoon/search/2805.cpp baekjoon/search/2110.cpp)
+#        baekjoon/search/2805.cpp
+#        baekjoon/search/2110.cpp
+#        baekjoon/search/10815.cpp
+#        baekjoon/search/10816.cpp
+        baekjoon/search/11662.cpp baekjoon/DivideandConquer/11728.cpp)
