@@ -138,4 +138,8 @@ add_executable(coding
 #        baekjoon/search/10816.cpp
 #        baekjoon/search/11662.cpp
 #        baekjoon/DivideandConquer/11728.cpp
-        baekjoon/DivideandConquer/1780.cpp baekjoon/DivideandConquer/11729.cpp)
+#        baekjoon/DivideandConquer/1780.cpp
+#        baekjoon/DivideandConquer/11729.cpp
+#        baekjoon/DivideandConquer/1992.cpp
+#        baekjoon/DivideandConquer/2447.cpp
+        baekjoon/DivideandConquer/2448.cpp)
