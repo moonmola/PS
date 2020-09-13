@@ -142,4 +142,10 @@ add_executable(coding
 #        baekjoon/DivideandConquer/11729.cpp
 #        baekjoon/DivideandConquer/1992.cpp
 #        baekjoon/DivideandConquer/2447.cpp
-        baekjoon/DivideandConquer/2448.cpp)
+#        baekjoon/DivideandConquer/2448.cpp
+#        baekjoon/greedy/11047.cpp
+#        baekjoon/greedy/2875.cpp
+#        baekjoon/greedy/10610.cpp
+#        baekjoon/greedy/1783.cpp
+        baekjoon/ExhaustiveSearch/1476.cpp
+        )
