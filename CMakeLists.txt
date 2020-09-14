@@ -45,11 +45,6 @@ add_executable(coding
         #programmers_level2/Joystick.cpp
         #GreedyExample.cpp
         #programmers_level2/Spicier.cpp
-#        maestroTEST/1.cpp
-        #maestroTEST/2.cpp
-        #maestroTEST/3.cpp
-        #maestroTEST/4.cpp
-        #maestroTEST/5.cpp
 #        test.cpp
 #        baekjoon/10992.cpp
 #        baekjoon/10991.cpp
@@ -147,5 +142,8 @@ add_executable(coding
 #        baekjoon/greedy/2875.cpp
 #        baekjoon/greedy/10610.cpp
 #        baekjoon/greedy/1783.cpp
-        baekjoon/ExhaustiveSearch/1476.cpp
-        )
+#        baekjoon/ExhaustiveSearch/1476.cpp
+#        baekjoon/greedy/1931.cpp
+#        baekjoon/greedy/11399.cpp
+#        baekjoon/greedy/2873.cpp
+        baekjoon/greedy/1744.cpp)
