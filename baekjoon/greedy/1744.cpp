@@ -16,24 +16,15 @@ int main(){
     for(auto& i: vec)   cin >> i;
     sort(vec.begin(), vec.end());
     int left = 0, right = n-1;
-    int ans = 0;
-    for(auto& i: vec)   cout << i <<' ';
-    cout << '\n';
+    long long ans = 0;
 
     for(;left < right; left+=2){
         if(vec[left]<1 && vec[left+1] < 1)  ans+= vec[left]*vec[left+1];
         else    break;
-        cout << ans << '\n';
-
     }
     for(;right>0; right-=2){
-        if(vec[right] > 1 && vec[right-1] > 1) {
-            ans += vec[right] * vec[right + 1];
-            cout << vec[right] << endl;
-        }
+        if(vec[right] > 1 && vec[right-1] > 1) ans += vec[right] * vec[right - 1];
         else    break;
-        cout << ans << '\n';
-
     }
     for(;right >= left; right--)    ans+= vec[right];
     cout << ans << '\n';
