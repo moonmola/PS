@@ -149,4 +149,10 @@ add_executable(coding
 #        baekjoon/greedy/1744.cpp
 #        baekjoon/ExhaustiveSearch/1107.cpp
 #        baekjoon/ExhaustiveSearch/1451.cpp
-        baekjoon/ExhaustiveSearch/9095.cpp)
+#        baekjoon/ExhaustiveSearch/9095.cpp
+#        baekjoon/ExhaustiveSearch/10819.cpp
+#        baekjoon/ExhaustiveSearch/10971.cpp
+#        baekjoon/ExhaustiveSearch/1697.cpp
+#        baekjoon/ExhaustiveSearch/1963.cpp
+#        baekjoon/ExhaustiveSearch/9019.cpp
+        baekjoon/ExhaustiveSearch/1525.cpp)
