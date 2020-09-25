@@ -1,9 +1,9 @@
 // PS 1963.cpp
 // Copyright (c) 2020 moonmola. All rights reserved. 9/20/20
 /*
- * �Ҽ� ���
+ * 소수 경로
  * RETRY
- * �����佺���ñ��� ä ����ϱ�!
+ * 에라토스뭐시기의 채 기억하기!
  */
 #include <iostream>
 #include <queue>
