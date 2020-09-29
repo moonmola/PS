@@ -167,5 +167,6 @@ add_executable(coding
 #        baekjoon/ExhaustiveSearch/2003.cpp
 #        baekjoon/ExhaustiveSearch/1806.cpp
 #        baekjoon/ExhaustiveSearch/1644.cpp
-        baekjoon/ExhaustiveSearch/1261.cpp baekjoon/ExhaustiveSearch/1208.cpp)
-
+#        baekjoon/ExhaustiveSearch/1261.cpp
+        baekjoon/ExhaustiveSearch/1208.cpp
+        )
