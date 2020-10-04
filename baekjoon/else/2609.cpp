@@ -14,13 +14,7 @@
 using namespace std;
 
 //최대공약수
-void swap(int& a, int&b){
-    int temp = a;
-    a=b;
-    b = temp;
-}
 int gcd(int a, int b){
-    if(a<b) swap(a,b);
     while( b!= 0 ){
         int r = a%b;
         a = b;
