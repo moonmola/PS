@@ -173,4 +173,6 @@ add_executable(coding
 #        baekjoon/ExhaustiveSearch/2632.cpp
 #        baekjoon/ExhaustiveSearch/2143.cpp
 #        programmers_level2/기능개발.cpp
-        programmers_level2/문자열압축.cpp)
+#        programmers_level2/문자열압축.cpp
+#        programmers_level2/가장큰수.cpp
+        programmers_level2/조이스틱.cpp)
