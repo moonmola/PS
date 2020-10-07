@@ -175,4 +175,8 @@ add_executable(coding
 #        programmers_level2/기능개발.cpp
 #        programmers_level2/문자열압축.cpp
 #        programmers_level2/가장큰수.cpp
-        programmers_level2/조이스틱.cpp)
+#        programmers_level2/조이스틱.cpp
+#        programmers_level2/더맵게.cpp
+#        cppprogrammers_level2/괄호변환.cpp
+#        programmers_level2/큰수만들기.cpp
+        programmers_level2/소수찾기.cpp programmers_level2/삼각달팽이.cpp)
