@@ -179,4 +179,6 @@ add_executable(coding
 #        programmers_level2/더맵게.cpp
 #        cppprogrammers_level2/괄호변환.cpp
 #        programmers_level2/큰수만들기.cpp
-        programmers_level2/소수찾기.cpp programmers_level2/삼각달팽이.cpp)
+#        programmers_level2/소수찾기.cpp
+#        programmers_level2/삼각달팽이.cpp
+#        programmers_level2/위장.cpp)
