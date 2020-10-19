@@ -4,34 +4,21 @@
 //
 // Created by mooninzoo on 2020-05-23.
 // Copyright (c) 2020 mooninzoo. All rights reserved
-//
-
 /*
- * DP(2¡¿n Å¸ÀÏ¸µ 2)
- * i¹øÂ° Å¸ÀÏÀº i-1¹øÂ°¿¡¼­ 1x2 Å¸ÀÏ ÇÑ°³ ºÙÀÌ´Â °æ¿ì¿Í
- * i-2¹øÂ°¿¡¼­ 2x1Å¸ÀÏ µÎ°³ ºÙÀÌ´Â °æ¿ì¿Í 2x2Å¸ÀÏ ÇÑ°³ ºÙÀÌ´Â °æ¿ì
- * d[1] = 1
- * d[2] = 3 (11 2 3)
- * d[3] = 5 (111 12 13 31 21)              2d[i-2]+d[i-1]
- * d[4] = 11 (1111 121 131 112 113 311 211 22 33 23 32)
+ * 2Ã—n íƒ€ì¼ë§ 2
  */
 #include <iostream>
+#include <vector>
 using namespace std;
-int dp(int* d, int n){
-    for(int i = 3; i<=n; i++) {
-        d[i] = (2 * d[i - 2] + d[i - 1]) % 10007;
-    }
-
-    return d[n];
-}
-
 int main(){
     int n;
-    cin >> n;
-    int d[n+1];
-    d[1] = 1;
-    d[2] = 3;
-    cout << dp(d,n);
+    cin >>n;
+    vector<int> v(n+1);
+    v[1]=1;
+    v[2]=3;
+    for(int i =3; i<n+1; i++){
+        v[i] = (v[i-1]+ v[i-2]*2)%10007;
+    }
+    cout <<v[n];
 
-    return 0;
 }

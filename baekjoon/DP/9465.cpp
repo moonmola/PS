@@ -5,82 +5,30 @@
 // Created by mooninzoo on 2020-05-27.
 // Copyright (c) 2020 mooninzoo. All rights reserved
 //
-
 /*
- * ½ºÆ¼Ä¿
- * dp[n][i]¸¦ n¹øÂ° ÁÙÀÇ i¹øÂ° ±îÁö ¾òÀ» ¼ö ÀÖ´Â ÃÖ°íÀÇ Á¡¼ö
- * dp[0][1] = arr[0][1], dp[1][1] = arr[1][1]] ·Î ÃÊ±âÈ­
+ * ìŠ¤í‹°ì»¤
+ * RETRY
  */
 #include <iostream>
+#include <algorithm>
 using namespace std;
-
+int a[2][100001]={ 0 };
+int dp[2][100001]={ 0 };
 int main(){
-    int test_case;
-    cin >> test_case;
-    for(int t = 0; t < test_case; t++){
-        int n;
+    int T,n;
+    cin >> T;
+    for(int t=0; t<T; t++){
         cin >> n;
-        int arr[2][n];
-        for(int i = 0; i <2; i++){
-            for(int j = 0; j <n; j++)
-                cin >> arr[i][j];
+        for(int i = 0; i < n; i++)  cin>>a[0][i];
+        for(int i = 0; i < n; i++)  cin>>a[1][i];
+        dp[0][0]=a[0][0];
+        dp[1][0]=a[1][0];
+        dp[0][1]=a[0][1]+dp[1][0];
+        dp[1][1]=a[1][1]+dp[0][0];
+        for(int i = 2;i<n; i++){
+            dp[0][i] = a[0][i]+max(dp[1][i-1],dp[1][i-2]);
+            dp[1][i] = a[1][i]+max(dp[0][i-1],dp[0][i-2]);
         }
-        int dp[2][n];
-        dp[0][0] = arr[0][0];
-        dp[1][0] = arr[1][0];
-        dp[0][1] = dp[1][0] + arr[0][1];
-        dp[1][1] = dp[0][0] + arr[1][1];
-        for(int j = 2; j <n; j++) {
-
-            dp[0][j] = max(dp[1][j-1] + arr[0][j], dp[1][j-2] + arr[0][j]);
-            dp[1][j] = max(dp[0][j-1] + arr[1][j], dp[0][j-2] + arr[1][j]);
-        }
-        cout << max(dp[0][n-1],dp[1][n-1])<<endl;//endl¾ÈÇØ¼­ Æ²·È½À´Ï´Ù ¶¹À½
+        cout << max(dp[0][n-1],dp[1][n-1])<<'\n';
     }
 }
-
-
-
-/* ±×³É Ç®¾úÀ½,, ½Ã°£,,ÃÊ°ú,,,,,,,,,,
-#include <iostream>
-using namespace std;
-int main(){
-    int test_case;
-    cin >> test_case;
-    for(int t = 0; t < test_case; t++) {
-        int n;
-        cin >> n;
-        int dp[2][n];
-        for (int i = 0; i < 2; i++) {
-            for (int j = 0; j < n; j++)
-                cin >> dp[i][j];
-        }
-        int result = 0;
-        while(1){
-            int max_i = 0;
-            int max_j = 0;
-            int max = -1;
-            for (int i = 0; i < 2; i++) {
-                for (int j = 0; j < n; j++){
-                    if(max <dp[i][j]) {
-                        max = dp[i][j];
-                        max_i = i;
-                        max_j = j;
-                    }
-                }
-            }
-            result += max;
-            if(max == 0)
-                break;
-            dp[max_i][max_j] = 0;
-            if(max_i != 1)  dp[max_i+1][max_j] = 0;
-            if(max_i != 0)  dp[max_i-1][max_j] = 0;
-            if(max_j != n-1)  dp[max_i][max_j+1] = 0;
-            if(max_j != 0)  dp[max_i][max_j-1] = 0;
-
-        }
-        cout << result << endl;
-    }
-
-}
- */

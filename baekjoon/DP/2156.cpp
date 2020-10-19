@@ -1,69 +1,26 @@
-//
 // 2156.cpp
 // PS
-//
 // Created by mooninzoo on 2020-05-28.
 // Copyright (c) 2020 mooninzoo. All rights reserved
-//
 /*
- * Æ÷µµÁÖ ½Ã½Äretry
- * dp[n]¿¡ n±îÁöÀÇ ÃÖ´ë·Î ¸¶½Ç ¼ö ÀÖ´Â Æ÷µµÁÖÀÇ ¾çÀ» ³Ö´Â´Ù
- * 11 10 20 59 1 15
- * 59ÀÏ¶§´Â 11+20+59°¡ ÃÖ´ë
- * 20 ±îÁö´Â ÃÖ´ñ°ªÀÌ 11+10+20
- *
- * ¼Ö·ç¼ÇºÃÀ½
- * dp[n] = dp[i-2] + arr[i] ->i¹øÂ° Æ÷µµÁÖ + i+2¹øÂ°±îÁöÀÇ ÃÖ´ñ°ª
- * dp[n] = dp[i-3] + arr[i-1] + arr[i] ->i¹øÂ° Æ÷µµÁÖ + i-1¹øÂ° Æ÷µµÁÖ + i-3±îÁöÀÇ ÃÖ´ñ°ª
- * max(dp[n],dp[n-1)) ->2¹ø ¿¬¼Ó ¾È¸ÔÀ» °æ¿ì°¡ Á¸Àç
- * À§¿¡ µÎ°³±îÁø »ı°¢ÇßÀ½
+ * í¬ë„ì£¼ ì‹œì‹
+ * RETRY
  */
-/*
 #include <iostream>
+#include <vector>
 #include <algorithm>
 using namespace std;
-
 int main(){
     int n;
     cin >> n;
-    int arr[10003] = {0, };
-    int dp[10003] = {0, };
-    for(int i= 3; i < n+3; i ++) {
-        cin >> arr[i];
+    vector<int> v(n);
+    vector<int> dp(n);
+    for(int i = 0; i < n; i++) cin >> v[i];
+    dp[0] = v[0];
+    dp[1] = v[1]+dp[0];
+    dp[2] = max({v[2]+v[1],v[2]+dp[0],dp[1]});
+    for(int i=3; i<n; i++){
+        dp[i]= max({v[i]+dp[i-2],v[i]+v[i-1]+dp[i-3],dp[i-1]});
     }
-    int ans = 0;
-    for (int i = 3; i < n+3; i++) {
-        if(i==6) {
-            dp[i] = max({dp[i - 3] + arr[i] + arr[i - 1], dp[i - 2] + arr[i], dp[i - 1], dp[i - 4] + arr[i-2] + arr[i-1] + arr[i]});
-        }
-        else {
-            dp[i] = max({dp[i - 3] + arr[i] + arr[i - 1], dp[i - 2] + arr[i],dp[i-1]});
-        }
-        ans = max(ans, dp[i]);
-    }
-    cout << ans;
-    return 0;
+    cout << dp[n-1];
 }
- */
-/* ÀÌ°Ô ¸Â¾ÒÀ½ ÇÏÁö¸¸ 1 2 3 4 ÀÇ °æ¿ì Æ²¸²
-#include <iostream>
-#include <algorithm>
-using namespace std;
-
-int main(){
-    int n;
-    cin >> n;
-    int arr[10003] = {0, };
-    int dp[10003] = {0, };
-    for(int i= 3; i < n+3; i ++) {
-        cin >> arr[i];
-    }
-    int ans = 0;
-    for (int i = 3; i < n+3; i++) {
-        dp[i] = max({dp[i - 3] + arr[i] + arr[i - 1], dp[i - 2] + arr[i],dp[i-1]});
-        ans = max(ans, dp[i]);
-    }
-    cout << ans;
-    return 0;
-}
-*/

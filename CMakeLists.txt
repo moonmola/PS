@@ -50,7 +50,7 @@ add_executable(coding
 #        baekjoon/10991.cpp
 #        baekjoon/2522.cpp
 #        baekjoon/10818.cpp
-#        baekjoon/1463.cpp
+#        baekjoon/DP/1463.cpp
 #        baekjoon/DP/11726.cpp
 #        baekjoon/DP/11727.cpp
 #        baekjoon/DP/9095.cpp
@@ -58,7 +58,7 @@ add_executable(coding
 #        baekjoon/DP/11057.cpp
 #        baekjoon/DP/2193.cpp
 #        baekjoon/DP/9465.cpp
-#        baekjoon/DP/2156.cpp
+        baekjoon/DP/2156.cpp
 #        baekjoon/DP/11053.cpp
 #        baekjoon/DP/11055.cpp
 #        baekjoon/DP/11722.cpp
@@ -181,4 +181,5 @@ add_executable(coding
 #        programmers_level2/큰수만들기.cpp
 #        programmers_level2/소수찾기.cpp
 #        programmers_level2/삼각달팽이.cpp
-#        programmers_level2/위장.cpp)
+#        programmers_level2/위장.cpp
+        )

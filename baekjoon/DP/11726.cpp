@@ -4,101 +4,21 @@
 //
 // Created by mooninzoo on 2020-05-23.
 // Copyright (c) 2020 mooninzoo. All rights reserved
-//
+
+/*
+ * 2Ã—n íƒ€ì¼ë§
+ */
 #include <iostream>
 #include <vector>
 using namespace std;
-//DP(retry)
-//¾ÕÀÇ Å¸ÀÏÀÌ 1°³ ¼¼·Î·Î ÀÖÀ» °æ¿ì, ¾Õ¿¡ Å¸ÀÏÀÌ 2°³ °¡·Î·Î ÀÖÀ» °æ¿ì¸¦ ´õÇÏ¸é µÈ´Ù
-//°æ¿ìÀÇ ¼ö¸¦ ÇØº¸°í Á¡È­½Ä »ı°¢ÇÏ±â
-
-int dp(int* d, int n){
-    d[1] = 1;
-    d[2] = 2;
-    for(int i = 3; i <=n ; i++) d[i] = (d[i-1]+d[i-2]) %10007;
-    //¿¬»êÇÒ¶§¸¶´Ù 10007·Î ³ª´« ³ª¸ÓÁö¸¦ ÀúÀå
-    return d[n];
-}
 int main(){
     int n;
     cin >> n;
-    int d[n+1];
-    cout << dp(d,n);
-
-    return 0;
+    vector<int> v(n+1);
+    v[1]=1;
+    v[2]=2;
+    for(int i = 3; i<n+1; i++){
+        v[i] = (v[i-1]+v[i-2])%10007;
+    }
+    cout << v[n];
 }
-
-
-/*
- * ±×³É ¹«ÀÛÁ¤ ÄÚµùÀ¸·Î ÇßÀ»¶§ 60±îÁö´Â µÈ´Ù..¤¾
- * ¼ıÀÚ°¡ ³Ê¹« Ä¿Á®¼­ ¾ÈµÈ´Ù
- *
-//1°ú 2·Î ±¸¼ºµÈ ÇÕÀÌ nÀÎ ¹è¿­ ÀÇ °¹¼ö
-//°°Àº °ÍÀÌ ÀÖ´Â ¼ø¿­ = n°³ Áß °°Àº °ÍÀÌ °¢°¢ p°³, q°³¾¿ ÀÖÀ»¶§ n°³¸¦ ¸ğµÎ ÅÃÇÏ¿© ÀÏ·Ä·Î ¹è¿­ÇÏ´Â ¼ø¿­ÀÇ ¼ö
-long long int factorial(int num1, int num2, int num3){
-    vector<int> vec1, vec2, vec3;
-    //num3°¡ 0ÀÎ°æ¿ì erase¿Í ³ª´©±â¿¡¼­ ¿À·ù³ª¹Ç·Î 1·Î ¹Ù²ãÁØ´Ù
-    if(num3==0)
-        num3=1;
-    //numµéÀÇ º¤ÅÍ ¸¸µé±â
-    for(int i = 1 ; i <= num1; i++){
-        vec1.push_back(i);
-        if(i<=num2) vec2.push_back(i);
-        if(i<=num3) vec3.push_back(i);
-    }
-    //numº¤ÅÍ¿¡¼­ ¼­·Î¼­·Î Áßº¹°ª ´Ù ¾ø¾Ö±â
-    vector<int>::iterator iter_a;
-    vector<int>::iterator iter_b;
-    vector<int>::iterator iter_a2;
-    for (iter_a = vec1.begin(); iter_a != vec1.end();) {
-        iter_a2 = iter_a;
-        for (iter_b = vec2.begin(); iter_b != vec2.end();) {
-            if (*iter_a == *iter_b) {
-                iter_b = vec2.erase(iter_b); //Áßº¹ Á¦°Å
-                iter_a = vec1.erase(iter_a);
-            } else
-                iter_b++;
-        }
-        if(vec1.size() ==0)
-            break;
-        if (iter_a == iter_a2)
-            iter_a++;
-    }
-
-    for (iter_a = vec1.begin(); iter_a != vec1.end();) {
-        iter_a2 = iter_a;
-        for (iter_b = vec3.begin(); iter_b != vec3.end();) {
-            if (*iter_a == *iter_b) {
-                iter_b = vec3.erase(iter_b); //Áßº¹ Á¦°Å
-                iter_a = vec1.erase(iter_a);
-            } else
-                iter_b++;
-        }
-        if (iter_a == iter_a2)
-            iter_a++;
-    }
-    //ÆÑÅä¸®¾ó°ª °è»ê
-    long long int result = 1;
-    for(auto elem : vec1)
-        result *= elem;
-    for(auto elem : vec2)
-        result /= elem;
-    for(auto elem : vec3) {
-        result /= elem;
-    }
-    return result;
-}
-int main(){
-    int n;
-    cin >> n;
-    int div_num = n/2;
-    long long int count = 1;
-    for(int i = 1; i <= div_num; i++){
-        int p = n-i*2;
-        int num = i+p;
-        count += factorial(num,i,p);
-        cout << count <<endl;
-    }
-    cout << count%10007;
-}
- */

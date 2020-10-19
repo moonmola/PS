@@ -1,51 +1,30 @@
-//
 // 1463.cpp
 // PS
 //
 // Created by mooninzoo on 2020-05-22.
 // Copyright (c) 2020 mooninzoo. All rights reserved
 //
-
-#include <iostream>
-#include <algorithm>
-using namespace std;
-//DP¹®Á¦(retry)
-//bottom-up(¹Ýº¹¹®¹æ½Ä)
-//Á¡È­½Ä : D[NÀ» 1·Î ¸¸µå´Â ÃÖ¼Ò È½¼ö] = D[N-1À¸ 1·Î ¸¸µå´Â ÃÖ¼Ò È½¼ö] +1 or D[N/2¸¦ 1·Î ¸¸µå´Â ÃÖ¼Ò È½¼ö]+1 or D[N/3À» ÃÖ¼Ò·Î ¸¸µå´Â ÃÖ¼Ò È½¼ö]+1
-//dp[i] = dp[i-1]+1;
-//if(i%2==0) dp[i] = MIN(dp[i], dp[i/2]+1);
-//if(i%3==0) dp[i] = MIN(dp[i], dp[i/3]+1);
-int main(){
-    int n, i ,dp[1000001];
-    cin >> n;
-    dp[0] = dp[1] - 1;
-    for(i = 2; i <=n; i++){
-        dp[i] = dp[i-1]+1;
-        if(i%2 == 0) dp[i] = min(dp[i], dp[i/2]+1);
-        if(i%3 == 0) dp[i] = min(dp[i], dp[i/3]+1);
-    }
-    cout << dp[n];
-}
-
-
-// ³»°¡ Ç¬ ¹æ¹ý - ÃÖÀû °æ·Î¸¦ »ý°¢¾ÈÇßÀ½
 /*
-int main(){
-    int X;
-    int count = 0;
-    cin >> X;
-    while(1){
-        if(X ==1)
-            break;
-        if(X%3)
-        if(X%3 == 0)
-            X = X/3;
-        else if(X%2 == 0)
-            X = X/2;
-        else
-            X -=1;
-        count++;
-    }
-    cout << count;
-}
+ * 1ë¡œ ë§Œë“¤ê¸°
  */
+#include <iostream>
+#include <vector>
+using namespace std;
+int main(){
+    int n;
+    cin >> n;
+    vector<int> v(n+1);
+    v[1]=0;
+    for(int i = 2; i<n+1; i++){
+        int m = 1e9;
+        if(i%3==0){
+            m = min(v[i/3]+1,m);
+        }
+        if(i%2==0){
+            m = min(v[i/2]+1,m);
+        }
+        m=min(v[i-1]+1,m);
+        v[i]=m;
+    }
+    cout << v[n];
+}

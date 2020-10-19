@@ -4,33 +4,21 @@
 //
 // Created by mooninzoo on 2020-05-27.
 // Copyright (c) 2020 mooninzoo. All rights reserved
-//
-
 /*
- *    0 1
- *  1 0 1
- *  2 1 0
- *  3 1 1 100 101
- *  4 2 1 1000 1001 1010
- *  5 3 2 10000 10001 10010 10100 10101
- *  6 5 3
+ * ì´ì¹œìˆ˜
+ * long longìœ¼ë¡œ í•˜ë‹ˆê¹Œ ë§ì•˜ë‹´
  */
-
 #include <iostream>
 using namespace std;
+long long a[91][3];
 int main(){
     int n;
     cin >> n;
-    long int dp[90][2] = {0, }; //ÃÊ±âÈ­ ½Å°æ¾²±â
-    dp[0][0] = 0;
-    dp[0][1] = 1;
-    long int result = 1; //ÁÖ¾îÁø ¹üÀ§¿¡¼­ ¸Ş¸ğ¸® ¹üÀ§ ³Ñ´ÂÁö È®ÀÎ
-    for(int i = 1; i < n; i++){
-        for(int j = 0; j < 2;j++){
-            dp[i][0] += dp[i-1][j];
-        }
-        dp[i][1] = dp[i-1][0];
-        result = dp[i][0]+dp[i][1];
+    a[1][0]=0;
+    a[1][1]=1;
+    for(int i =2; i<n+1; i++){
+        a[i][0] = a[i-1][0]+a[i-1][1];
+        a[i][1] = a[i-1][0];
     }
-    cout << result;
+    cout << a[n][0]+a[n][1];
 }

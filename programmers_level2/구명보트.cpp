@@ -1,6 +1,9 @@
 // PS 구명보트.cpp
 // Copyright (c) 2020 moonmola. All rights reserved. 10/9/20
-
+/*
+ * 맞았는데 cout안지워서 효율성테스트 0점나왔음
+ * 제출할떄는 cout 지우기!!!!!!
+ */
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -8,9 +11,6 @@
 
 using namespace std;
 
-
-/*
-//테케는 맞는데 효율성 없음
 int solution(vector<int> people, int limit) {
     int answer = 0;
     sort(people.begin(),people.end());
@@ -20,25 +20,19 @@ int solution(vector<int> people, int limit) {
     while(start<=end){
         if(start==end){
             answer++;
-            cout << '!' << endl;
-
             break;
         }
-        if(people[start]+people[end]<=limit){
+        if(people[start]+people[end]<=limit) {
             answer++;
             start++;
             end--;
-            cout << '?' << endl;
         }
         else{
             end--;
-            cout << '-' << endl;
-
             answer++;
         }
     }
-
     return answer;
 }
- */
+
 
