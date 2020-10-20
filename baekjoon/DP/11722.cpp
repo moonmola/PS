@@ -4,34 +4,27 @@
 //
 // Created by mooninzoo on 2020-06-02.
 // Copyright (c) 2020 mooninzoo. All rights reserved
-//
 /*
- * °¡Àå ±ä °¨¼ÒÇÏ´Â ºÎºĞ ¼ö¿­
+ * ê°€ì¥ ê¸´ ê°ì†Œí•˜ëŠ” ë¶€ë¶„ ìˆ˜ì—´
  */
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
-
 int main(){
-    int n;
-    cin>>n;
-    int dp[1001] = {0, };
-    int arr[1001] = {0, };
-
+    int n,ans=0;
+    cin >> n;
+    vector<int> v(n);
+    vector<int> dp(n);
+    for(int i = 0; i < n; i++) cin>>v[i];
     for(int i = 0; i < n; i++){
-        cin >> arr[i];
-    }
-    dp[0] = 1;
-    int result = dp[0];
-    for(int i = 1; i < n; i++){
-        int max_n = 0;
-        for(int j = 0; j <i; j++){
-            if(max_n<dp[j]&& arr[i]<arr[j])
-                max_n = dp[j];
+        dp[i]=1;
+        for(int j = 0; j < i; j++){
+            if(v[i]<v[j]){
+                dp[i]= max(dp[i],dp[j]+1);
+            }
         }
-        dp[i]= max_n+1;
-        if(result<dp[i])
-            result = dp[i];
+        ans = max(ans,dp[i]);
     }
-    cout << result << endl;
-
+    cout << ans << '\n';
 }

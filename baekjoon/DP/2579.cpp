@@ -4,22 +4,25 @@
 //
 // Created by mooninzoo on 2020-06-03.
 // Copyright (c) 2020 mooninzoo. All rights reserved
-//
-
 /*
- * °è´Ü ¿À¸£±â
+ * ê³„ë‹¨ì˜¤ë¥´ê¸°
+ * RETRY
  */
 #include <iostream>
+#include <vector>
 #include <algorithm>
 using namespace std;
 int main(){
     int n;
     cin >> n;
-    int arr[303] = {0, };
-    for(int i = 3; i < n+3; i++)  cin>>arr[i];
-    int dp[303] = {0, };
-    for(int i = 3; i < n+3; i++){
-        dp[i] = max(arr[i]+dp[i-2], dp[i-3]+arr[i-1]+arr[i]);
+    vector<int> v(n);
+    vector<int> dp(n);
+    for(auto& i:v)  cin >> i;
+    dp[0]=v[0];
+    dp[1]=v[0]+v[1];
+    dp[2]=max(dp[0] + v[2], v[1] + v[2]);
+    for(int i = 3; i <n; i++){
+        dp[i] = max(dp[i-2]+v[i],dp[i-3]+v[i-1]+v[i]);
     }
-    cout << dp[n+2] << endl;
+    cout << dp[n-1]<<'\n';
 }

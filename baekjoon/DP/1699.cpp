@@ -4,26 +4,13 @@
 //
 // Created by mooninzoo on 2020-06-04.
 // Copyright (c) 2020 mooninzoo. All rights reserved
-//
-
 /*
- * Á¦°ö¼öÀÇ ÇÕ
- * ¼Ö·ç¼Ç ºÃ
+ * ì œê³±ìˆ˜ì˜ í•©
  */
 #include <iostream>
-#include <algorithm>
+#include <vector>
 using namespace std;
 
 int main(){
-    int n;
-    cin >> n;
-    int dp[100000]={0,};
-    for(int i = 1; i <= n;i++){
-        dp[i] = i;
-        for(int j = 1; j*j <= i; j++){
-            dp[i] = min(dp[i],dp[i-j*j]+1);
-        }
-    }
-    cout << dp[n] << endl;
-}
 
+}

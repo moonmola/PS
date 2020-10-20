@@ -4,52 +4,21 @@
 //
 // Created by mooninzoo on 2020-06-03.
 // Copyright (c) 2020 mooninzoo. All rights reserved
-//
 /*
- * ø¨º”«’
- * retry
+ * Ïó∞ÏÜçÌï©
  */
 #include <iostream>
+#include <vector>
 using namespace std;
 int main(){
-    int n;
+    int n,ans=-1e9;
     cin >>n;
-    int arr[n];
-    for(int i = 0; i < n; i++) cin >> arr[i];
-    int result;
-    int dp[n];
-    dp[0]=arr[0];
-    result = dp[0];
-    for(int i = 1; i<n; i++) {
-        dp[i] = max(dp[i-1]+arr[i],arr[i]);
-        result = max(result,dp[i]);
+    vector<int> v(n);
+    vector<int> dp(n);
+    for(int i = 0; i < n; i++) cin >> v[i];
+    for(int i = 0; i < n; i++){
+        dp[i] = max(v[i],dp[i-1]+v[i]);
+        ans = max(ans, dp[i]);
     }
-    cout << result;
+    cout << v[-5] << endl;
 }
-
-
-/* Ω√∞£√ ∞˙
-int main(){
-    int n;
-    cin >>n;
-    int arr[n];
-    for(int i = 0; i < n; i++) cin >> arr[i];
-
-    int dp1[n];
-    int result;
-    dp1[0]=arr[0];
-    for(int i = 1; i<n; i++) {
-        dp1[i] = dp1[i - 1] + arr[i];
-    }
-    result = dp1[0];
-    for(int i = 0 ;i < n ; i++){
-        int max = dp1[0];
-        for(int j = 0; j <i; j++){
-            if(max<dp1[i]-dp1[j])   max = dp1[i]-dp1[j];
-        }
-        if(result < max)
-            result = max;
-    }
-    cout << result;
-}
- */

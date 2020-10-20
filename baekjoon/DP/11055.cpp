@@ -4,30 +4,26 @@
 //
 // Created by mooninzoo on 2020-06-02.
 // Copyright (c) 2020 mooninzoo. All rights reserved
-//
-
+/*
+ * 가장 큰 증가 부분 수열
+ */
 #include <iostream>
+#include <vector>
 using namespace std;
-int main()
-{
-    int n;
+int main(){
+    int n,ans=0;
     cin >> n;
-    int arr[1010] = {0,};
+    vector<int> v(n);
+    vector<int> dp(n);
+    for (int i = 0; i < n; ++i) cin>>v[i];
     for(int i = 0; i < n; i++){
-        cin >> arr[i];
-    }
-    int dp[1010] = {0, };
-    dp[0] = arr[0];
-    int max = dp[0];
-    for(int i = 0; i < n; i++){
-        dp[i] = arr[i];
-        for(int j = 0; j < i; j++){
-            if(arr[i]>arr[j] && dp[i] < dp[j]+arr[i]){
-                dp[i] = dp[j]+ arr[i];
+        dp[i] = v[i];
+        for(int j = 0; j <i; j++){
+            if(v[i]>v[j]){
+                dp[i] = max(dp[i],dp[j]+v[i]);
             }
         }
-        if(max<dp[i])
-            max = dp[i];
+        ans = max(ans,dp[i]);
     }
-    cout << max << endl;
+    cout << ans << '\n';
 }

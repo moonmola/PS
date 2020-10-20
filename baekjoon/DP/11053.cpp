@@ -4,38 +4,28 @@
 //
 // Created by mooninzoo on 2020-05-30.
 // Copyright (c) 2020 mooninzoo. All rights reserved
-//
-
 /*
- * °¡Àå ±ä Áõ°¡ÇÏ´Â ºÎºĞ ¼ö¿­
- * ¼Ö·ç¼Ç È®ÀÎ
- * ÇöÀçÀÇ ÀÚ½Å°ª°ú °ú°ÅÀÇ °ªµéÀ» µ¹¾ÆºÁ¼­ ±×Áß ÃÖ´ëÀÇ °ªÀ¸·Î ÀÚ½ÅÀÇ ÃÖ´ë ±æÀÌ¸¦ Á¤ÇÑ´Ù
- * °¢ ºÎºĞ¸¶´Ù °ú°ÅÀÇ ÀúÀåÇÑ ¹è¿­À» °Ë»öÇØ¾ßÇÑ´Ù
- * ±×¸²¼³¸í : https://wootool.tistory.com/96
-*/
-
+ * ê°€ì¥ ê¸´ ì¦ê°€í•˜ëŠ” ë¶€ë¶„ ìˆ˜ì—´
+ * RETRY
+ */
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
-
 int main(){
-    int n;
+    int n,ans=0;
     cin >> n;
-    int dp[1000];
-    int arr[1000];
-    int max = 0;
-    for(int i = 1;i<=n; i++) cin>>arr[i];
-    dp[0] = 0;
-    for(int i = 1; i<= n; i++){
-        int min = 0;
+    vector<int> v(n);
+    vector<int> dp(n);
+    for(int i = 0; i <n; i++)   cin >> v[i];
+    for(int i = 0; i<n;i++){
+        dp[i]=1;
         for(int j = 0; j < i; j++){
-            if(arr[i]>arr[j]){
-                if(min< dp[j])
-                    min = dp[j];
+            if(v[i]>v[j]){
+                dp[i] = max(dp[i],dp[j]+1);
             }
         }
-        dp[i] = min+1;
-        if(max <dp[i])
-            max = dp[i];
+        ans = max(ans,dp[i]);
     }
-    cout << max << endl;
+    cout << ans;
 }
