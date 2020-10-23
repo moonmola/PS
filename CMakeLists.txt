@@ -64,7 +64,7 @@ add_executable(coding
 #        baekjoon/DP/11722.cpp
 #        baekjoon/DP/11054.cpp
 #        baekjoon/DP/1912.cpp
-        baekjoon/DP/2579.cpp
+#        baekjoon/DP/2579.cpp
 #        baekjoon/DP/1699.cpp
 #        baekjoon/DP/2133.cpp
 #        baekjoon/DP/9461.cpp
@@ -92,6 +92,7 @@ add_executable(coding
 #        baekjoon/else/10824.cpp
 #        baekjoon/else/11656.cpp
 #        baekjoon/else/1406.cpp
+        baekjoon/else/1158.cpp
 #        baekjoon/else/1168.cpp
 #        baekjoon/else/10430.cpp
 #        baekjoon/else/2609.cpp

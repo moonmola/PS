@@ -8,24 +8,17 @@
 
 /*
  *  수 정렬하기 2
- *  시간초과
- *  시간 복잡도가 nlogn인 알고리즘 사용해야함
- *
- *  printf, scanf 쓰면 시간이 줄어들어서 그냥 사용해도됨
+ *  sort = 시간 복잡도가 nlogn인 알고리즘 사용해야함
  */
 #include <iostream>
 #include <algorithm>
-
+#include <vector>
 using namespace std;
 int main(){
     int n;
     cin >> n;
-    int* arr = new int [n];
-    for(int i = 0; i<n;i++){
-        scanf("%d",&arr[i]);
-    }
-    sort(arr,arr+n);
-    for(int i = 0; i<n; i++){
-        printf("%d\n",arr[i]);
-    }
+    vector<int> v(n);
+    for(auto& i : v)    cin >> i;
+    sort(v.begin(),v.end());
+    for(auto& i : v)    cout << i<<'\n';
 }

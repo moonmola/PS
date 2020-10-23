@@ -4,25 +4,20 @@
 //
 // Created by mooninzoo on 2020-06-05.
 // Copyright (c) 2020 mooninzoo. All rights reserved
-//
 /*
- * ÆÄµµ¹İ ¼ö¿­
- * Å×½ºÆ® ÄÉÀÌ½º¿¡¼­ long int È®ÀÎÇÒ°Í
+ * íŒŒë„ë°˜ ìˆ˜ì—´
  */
-
 #include <iostream>
 using namespace std;
-
 int main(){
-    int T;
-    cin >> T;
-    long int dp[100]= {1,1,1,2,2, };
-    for(int j = 5 ;j < 100; j++){
-        dp[j] = dp[j-5] + dp[j-1];
+    long long a[101]={0,1,1,1,2,2,0};
+    int t,n;
+    cin >> t;
+    for(int i = 6; i <=100; i++){
+        a[i] = a[i-1]+a[i-5];
     }
-    for(int i = 0; i < T; i ++){
-        int n;
+    for(int T=0;T<t;T++) {
         cin >> n;
-        cout << dp[n-1] << endl;
+        cout << a[n] << '\n';
     }
 }

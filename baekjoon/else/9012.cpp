@@ -9,7 +9,6 @@
 /*
  * 괄호
  * 맞았다!
- *
  */
 #include <iostream>
 #include <string>

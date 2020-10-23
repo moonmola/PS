@@ -7,7 +7,6 @@
 //
 /*
  * 큐
- *
  */
 #include <iostream>
 #include <string>
