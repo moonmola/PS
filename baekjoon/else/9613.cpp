@@ -17,24 +17,7 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-
-/*이거로 하는게 낫겠다
-int getGCD(int a, int b)
-{
-    if (b == 0)
-        return a;
-    else
-        return getGCD(b, a%b);
-}
- */
-
-void swap(int&a ,int& b){
-    int temp = a;
-    a = b;
-    b = temp;
-}
 int gcd(int a, int b){
-    if(a<b) swap(a,b);
     while(b!=0){
         int r= a%b;
         a=b;
@@ -64,10 +47,7 @@ int main(){
         for(int j = 0; j < k ;j++){
             cin >> vec[j];
         }
-//        sort(vec.begin(),vec.end(),greater<int>());
-//        vec.erase(unique(vec.begin(),vec.end()),vec.end());
         cout << sum_gcd(vec) << '\n';
-
     }
 }
 

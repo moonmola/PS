@@ -12,14 +12,7 @@
 
 #include <iostream>
 using namespace std;
-
-void swap(int& a, int& b){
-    int temp = a;
-    a = b;
-    b = temp;
-}
 int gcd(int a, int b){
-    if(a<b) swap(a,b);
     while(b != 0){
         int r= a%b;
         a=b;
@@ -30,7 +23,6 @@ int gcd(int a, int b){
 int lcm(int a,int b){
     return a*b/gcd(a,b);
 }
-
 int main(){
     int T;
     cin >> T;

@@ -8,11 +8,11 @@
 
 /*
  * 최대공약수와 최소공배수
+ * RETRY
  */
 
 #include <iostream>
 using namespace std;
-
 //최대공약수
 int gcd(int a, int b){
     while( b!= 0 ){

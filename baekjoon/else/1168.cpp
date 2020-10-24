@@ -8,6 +8,8 @@
 
 /*
  * 요세푸스 문제 2
+ * RETRY
+ * vector의 erase는 memmove를 사용하기때문에 속도가 빠르다
  */
 
 #include <iostream>

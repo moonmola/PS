@@ -13,13 +13,7 @@
 #include <iostream>
 using namespace std;
 
-void swap(long& a, long& b){
-    long temp = a;
-    a = b;
-    b = temp;
-}
 long gcd(long a, long b){
-    if(a<b) swap(a,b);
     while( b!=0 ){
         long r = a%b;
         a = b;

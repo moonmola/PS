@@ -21,9 +21,7 @@ int main(){
     vector<bool> vec(1000001,true);
     vec[0] = false;
     vec[1] = false;
-
     cin >> m >> n;
-
     for(int i = 2; i <n+1; i++){
         if(vec[i]){
             for(int j = 2 * i ;j <n+1; j = j+i)

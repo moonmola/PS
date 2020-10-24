@@ -22,7 +22,6 @@ int main(){
             for (int j = 2; i * j <= 1000000; j++) vec[i * j] = false;
         }
     }
-
     int num;
     while(1){
         cin >> num;
