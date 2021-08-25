@@ -1,5 +1,5 @@
 //
-// 1701.cpp
+// 1707.cpp
 // PS
 //
 // Created by mooninzoo on 8/31/20.
@@ -18,48 +18,55 @@
 #define red 1
 #define blue 2
 using namespace std;
-string answer;
-void dfs(vector<int> graph[], int visit[], int start){
-    for(int i = 0; i < graph[start].size(); i++){
-        int next = graph[start][i];
-        if(visit[start]&&visit[next]&&visit[start]==visit[next]){
-            answer = "NO";
-            break;
-        }
-        if(!visit[next]){
-            visit[next]=red;
-            if(visit[start]==red){
-                visit[next] = blue;
-            }
-            dfs(graph,visit,next);
-        }
-    }
-}
 int main(){
-    int K;
-    cin >> K;
-    while(K>0){
-        int V,E;
-        cin >> V>>E;
-        vector<int> graph[20001];
-        int visit[20001] = {0, };
-        for(int i = 0 ;i < E; i++){
+    int T;
+    cin >> T;
+    int v,e;
+    int visit[200001]={0};
+    for(int t = 0 ;t<T; t++) {
+        cin >> v >> e;
+        vector<int> vec[v+1];
+        for(int i = 0; i < e; i++)  {
             int temp1,temp2;
             cin >> temp1 >> temp2;
-            graph[temp1].push_back(temp2);
-            graph[temp2].push_back(temp1);
+            vec[temp1].push_back(temp2);
+            vec[temp2].push_back(temp1);
         }
-        answer = "YES";
-        for(int i = 1; i <= V; i++){
-            if(visit[i] == 0){
+        queue<int> q;
+        bool flag = false;
+        for(int i = 1; i <= v; i++){
+            if(!visit[i]) {
+                q.push(i);
                 visit[i] = red;
-                dfs(graph,visit,i);
             }
+            while(!q.empty()) {
+                int curr= q.front();
+                q.pop();
+                for(auto elem: vec[curr]) {
+                    if(visit[elem]) {
+                        if(visit[elem]==visit[curr]){
+                            flag = true;
+                            break;
+                        }
+                        continue;
+                    }
+                    if (visit[curr]==red) {
+                        q.push(elem);
+                        visit[elem]=blue;
+                    }
+                    else {
+                        q.push(elem);
+                        visit[elem]=red;
+                    }
+                }
+                if(flag)    break;
+            }
+            if(flag)    break;
         }
-        cout << answer << '\n';
-        K--;
+        if(flag)    cout<< "NO" << '\n';
+        else        cout << "YES" << '\n';
+        memset(visit,0,sizeof(visit));
     }
-    return 0;
 }
 
 

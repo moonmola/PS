@@ -110,11 +110,11 @@ add_executable(coding
 #        baekjoon/else/6588.cpp
 #        baekjoon/else/11653.cpp
 #        baekjoon/else/10872.cpp
-        baekjoon/else/1676.cpp
+#        baekjoon/else/1676.cpp
 #        baekjoon/else/2004.cpp
 #        baekjoon/graph/1260.cpp
 #        baekjoon/graph/11724.cpp
-#        baekjoon/graph/1701.cpp
+#        baekjoon/graph/1707.cpp
 #        baekjoon/graph/10451.cpp
 #        baekjoon/graph/2331.cpp
 #        baekjoon/graph/9466.cpp
@@ -183,4 +183,7 @@ add_executable(coding
 #        programmers_level2/소수찾기.cpp
 #        programmers_level2/삼각달팽이.cpp
 #        programmers_level2/위장.cpp
+#        exam.cpp
+#        baekjoon/iostream/2557.cpp
+        baekjoon/iostream/2446.cpp
         )

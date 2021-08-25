@@ -13,7 +13,6 @@
 
 #include <iostream>
 using namespace std;
-
 struct Node{
     char data;
     Node *left;
@@ -42,31 +41,28 @@ void postorder_traverse(Node *R){
     cout << R->data;
 }
 int main(){
-    int n,curr;
+    int n, curr;
     cin >> n;
     char chr,nl,nr;
     nodes = new Node[n];
     for(int i = 0; i <n; i++){
-        cin >> chr>> nl>>nr;
+        cin >> chr >> nl >> nr;
         curr = chr-'A';
-        nodes[curr].data=chr;
+        nodes[curr].data = chr;
         if(nl=='.')
             nodes[curr].left=NULL;
         else
-            nodes[curr].left=&nodes[nl-'A'];
+            nodes[curr].left = &nodes[nl-'A'];
         if(nr=='.')
             nodes[curr].right=NULL;
         else
-            nodes[curr].right=&nodes[nr-'A'];
+            nodes[curr].right = &nodes[nr-'A'];
+
     }
     preorder_traverse(&nodes[0]);
     cout << '\n';
     inorder_traverse(&nodes[0]);
-    cout<<'\n';
+    cout << '\n';
     postorder_traverse(&nodes[0]);
-    cout<<'\n';
-
     delete nodes;
-
 }
-

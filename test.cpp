@@ -1,50 +1,43 @@
-//
-// Created by moon on 2020-03-31.
-//
-
-#include <string>
-#include <vector>
-#include <algorithm>
 #include <iostream>
-
+#include "string.h"
 using namespace std;
-bool isSame(string id, string ban){
-    if(id.size() != ban.size())  return false;
-    for(int i = 0; i < id.size(); i++){
-        if(ban[i]=='*') continue;
-        else if(ban[i] != id[i])    return false;
-    }
-    return true;
-}
 
-int solution(vector<string> user_id, vector<string> banned_id) {
-    int answer = 0;
-    vector<int> ind;
-    for(int i = 0; i < banned_id.size(); i++) ind.push_back(0);
-    for(int i = 0; i < user_id.size()-banned_id.size(); i++) ind.push_back(1);
-    do{
-        int temp = 0;
-        vector<string> banned = banned_id;
-        for(int i = 0; i < user_id.size(); i++){
-            if(!ind[i]){
-                cout << user_id[i] <<' ';
-                for(auto& ban : banned){
-                    if(isSame(user_id[i], ban)) {temp++;
-                    ban ="";
-                    break;}
-                }
-            }
+string u = "";
+string decompression(string input) {
+    string u = input;
+    int start_idx = input.find('(');
+    int end_idx = input.rfind(')');
+    int mul_idx = start_idx - 1;
+//    for(int i = 0; i < start_idx-1; i++){
+//        cout << input[i];
+//    }
+
+
+    if (start_idx > 0) {
+//        cout << "input[mul_idx] " << input[mul_idx] << endl;
+        for (int i = 0; i < input[mul_idx]-'0'; i++) {
+            cout << decompression(input.substr(start_idx + 1, end_idx - start_idx - 1));
         }
-        cout << endl;
-        if(temp==banned_id.size()) answer++;
-    }while(next_permutation(ind.begin(),ind.end()));
-
-
-    return answer;
+//        for(int i = end_idx+1; i < input.size(); i++){
+//            cout << input[i];
+//        }
+//        return decompression(input.substr(start_idx + 1, end_idx - start_idx - 1));
+    }
+    else {
+        return input;
+    }
 }
-int main(){
-    vector<string> user_id = {"frodo", "fradi", "crodo", "abc123", "frodoc"};
-    vector<string> banned_id = {"fr*d*", "*rodo", "******", "******"};
 
-    cout << solution(user_id,banned_id);
+
+int main() {
+
+    string input;
+
+    cout << "압축된 문자열 입력 : ";
+    cin >> input;
+
+    decompression(input);
+
+
+    return 0;
 }
